@@ -1,0 +1,111 @@
+.main{
+    height: 700px;
+    width: 900px;
+    background-color:  #F0F8FF;
+    margin-left: 200px;
+    font-family: Arial;
+}
+.head{
+    height: 100px;
+    width : 900px;
+    background-color: lightblue;
+}
+.login{
+    height: 50px;
+    width: 250px;
+    position: relative;
+    top:40px;
+    left:-20px;
+    float: right;
+    background-color: lightblue;
+}
+.bodyleft{
+    height: 300px;
+    width: 400px;
+    margin-left: 60px;
+    margin-top: 40px;
+    background-color:  	#F0F8FF;
+    float :left;
+}
+.bodyright{
+    height: 300px;
+    width: 330px;
+    background-color:  	#F0F8FF;
+    float: left;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+#log{
+    margin-left: 10px;
+    background-color: #F0F8FF;
+}
+#search{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 300px;
+    height:25px;
+    float: left;
+}
+#searchtext{
+    margin-left: 30px;
+}
+#searchimage{
+    width: 40px;
+    height: 40px;
+    margin-top: 17px;
+    float: left;
+}
+#searchbutton{
+    height: 30px;
+    width:30px;  
+}
+#subbutton1{
+    background-color:  	#F0F8FF;
+    border-style: none;
+    margin-left: 30px;
+    color: black;
+}
+#subbutton{
+    background-color:  	#F0F8FF;
+    border-style: none;
+    color: black;
+}
+#upload{
+    height: 100px;
+    width: 350px;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 40px;
+}
+#socialsite{
+    margin-left: 10px;
+    background-color: lightblue;
+}
+#upload{
+    text-shadow: 5px 5px 5px #FFEFD5;
+    background-color: lightblue;
+}
+#sign{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 305px;
+}
+#fillfield{
+    margin-left: 10px;
+}
+#sign-up{
+    font-size: 30px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: lightblue;
+}
+.bottom{
+    height: 230px;
+    width: 900px;
+    background-color: lightblue;
+    margin-top: 400px;
+}
+#join{
+    margin-left: 10px;
+}
