@@ -2,10 +2,12 @@
     <html>
         <head>
             <title>
-                File4U
+                Files4U
             </title>
-            <script src="jquery.min.js"></script>
-            <link rel="stylesheet" type="text/css" href="files4u.css">
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <script src="js/files4u.js">  
+            </script>
+            <link rel="stylesheet" type="text/css" href="css/files4u.css">
         </head>
         <body>
             <div class="main">
@@ -13,9 +15,9 @@
                     <div class="login">
                         <span>
                         <button id="log">Login</button>
-                        <img id="buttonimage2" src="twitter.png" alt="twitter" width="15" height="15">
-                        <img id="buttonimage2" src="fb.png" alt="fb" width="15" height="15">
-                        <img id="buttonimage2" src="google.png" alt="google" width="15" height="15">
+                        <img id="buttonimage2" src="images/twitter.png" alt="twitter" width="15" height="15">
+                        <img id="buttonimage2" src="images/fb.png" alt="fb" width="15" height="15">
+                        <img id="buttonimage2" src="images/google.png" alt="google" width="15" height="15">
                         </span>
                     </div>
                 </div> 
@@ -24,61 +26,81 @@
                     <span id="searchtext">Search here for your file...</span>
                     <input id="search" type="text" placeholder="Search">
                     
-                    <img id="searchimage" src="search.png" alt="search" width="40" height="40">
+                    <img id="searchimage" src="images/search.png" alt="search" width="40" height="40">
                     <br>
                     <button id="subbutton1">
-                        <img id="buttonimage1" src="files.png" alt="file" width="15" height="15">
+                        <img id="buttonimage1" src="images/files.png" alt="file" width="15" height="15">
                         Files
                     </button>
                     <button id="subbutton">
-                        <img id="buttonimage2" src="video.png" alt="video" width="15" height="15">
+                        <img id="buttonimage2" src="images/video.png" alt="video" width="15" height="15">
                         Videos
                     </button>
                      <button id="subbutton">
-                        <img id="buttonimage2" src="music.png" alt="music" width="15" height="15">
+                        <img id="buttonimage2" src="images/music.png" alt="music" width="15" height="15">
                         Music
                     </button>
                      <button id="subbutton">
-                        <img id="buttonimage2" src="photos.png" alt="photo" width="15" height="15">
+                        <img id="buttonimage2" src="images/photos.png" alt="photo" width="15" height="15">
                         Photos
                     </button>
                     <button id="upload">
-                        Upload
+                        Download
                     </button>
                 </div>
                 <div class="bodyright">
                     <br>
+                    
                     <span id="join">Join now!</span>
                     <br>
                     <br>
                     <button id="socialsite">
-                        <img id="buttonimage2" src="twitter.png" alt="twitter" width="15" height="15">
+                        <img id="buttonimage2" src="images/twitter.png" alt="twitter" width="15" height="15">
                         twitter
                     </button>
                     <button id="socialsite">
-                        <img id="buttonimage2" src="fb.png" alt="fb" width="15" height="15">
+                        <img id="buttonimage2" src="images/fb.png" alt="fb" width="15" height="15">
                         facebook
                     </button>
                     <button id="socialsite">
-                        <img id="buttonimage2" src="google.png" alt="google" width="15" height="15">
+                        <img id="buttonimage2" src="images/google.png" alt="google" width="15" height="15">
                         google
                     </button>
                     <br>
                     <br>
+                    <form id="signup_form">
                     <span id="fillfield">
                     or fill the fields below...
                     </span>
                     <br>
-                    <input type="text" id="sign" placeholder="E-mail">    
-                    <input type="text" id="sign" placeholder="Password"> 
-                    <input type="text" id="sign" placeholder="Confirm password">
-                    <button id="sign-up">
-                        Sign Up
+                    <input type="text" id="sign" placeholder="E-mail" required>    
+                    <input type="text" id="sign" placeholder="Password" required> 
+                    <input type="text" id="sign" placeholder="Confirm password" required>
+                    <input type="submit" id="sign-up" value="Sign Up">
+                    </form>
+                </div>
+                <div class="bottom">
+                </div>
+                <div class="registration" id="login_div">
+                    <br>
+                    <input type="text" id="log-in" placeholder="E-mail">    
+                    <input type="text" id="log-in" placeholder="Password"> 
+                    <input type="text" id="log-in" placeholder="Confirm password">
+                    <div class="inside_login">
+                        <br>
+                         <span id="remember_me">
+                             <input type="checkbox" checked="check" value="Rememberme">Remember me
+                    </span>
+                    <button id="log-in_button">
+                        Log In
                     </button>
-                </div><div class="bottom">
+                   
+                    </div>
+                     <img id="socialimage" src="images/twitter.png" alt="twitter" width="23" height="25">
+                     <img id="socialimage" src="images/fb.png" alt="fb" width="25" height="25">
+                     <img id="socialimage" src="images/google.png" alt="google" width="25" height="25">
+                      
                 </div>
-                </div>
-                
-            
+            </div>
         </body>
     </html>    
