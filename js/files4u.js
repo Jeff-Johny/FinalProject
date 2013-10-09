@@ -30,7 +30,7 @@ $(document).ready(function(){try{
                         equalTo: "incorrect password"
         }
     },
-    submitHandler: function(e) {
+    submitHandler: function() {
         if ($('#signup_form').valid()) {
             $("#signup_form").submit(function(e) {
              e.preventDefault();
@@ -70,12 +70,17 @@ $("#login_form").validate({
         }
         
     },
-    submitHandler: function(e) {
-        if ($('#login_form').valid()) {
-            $("#login_form").submit(function() {
-                alert("okay da");
-                $("html").load(("demo.html"));
-            });   
+    submitHandler: function() {
+        if ($("#login_form").valid()) {
+            
+                try{
+		 value=$("#login_form").serialize();
+                 alert(value);
+                $.post("login.php", value).done(function(data) {
+                    alert(data);
+                });
+                }
+                catch(e){alert(e);}
     }
     }
 });

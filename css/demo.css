@@ -112,4 +112,17 @@ li a:hover{
 #upload_button{
     height: 98px;
     width: 752px;
+    background-color: white;
+    border-style: none;
+}
+#contentwith_link{
+    width : 760px;
+    height: auto;
+}
+#download_button{
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    height: 50px;
+    width: 100px;
 }
