@@ -1,103 +1,100 @@
 
 body,h1,h3,p,td,quote,small,form,input,ul,li,ol,label{
-	margin:0px;
-	padding:0px;
-	font-family:Arial;
+    margin:0px;
+    padding:0px;
+    font-family:Arial;
 }
 
 body{
-	margin-top:20px;
-	color:#51555C;
-	font-size:13px;
-	background-color:#123456;
-	text-align:center;
+    margin-top:20px;
+    color:#51555C;
+    font-size:13px;
+    background-color:#123456;
+    text-align:center;
 }
 
 .clear{
-	clear:both;
+    clear:both;
 }
 
 a, a:visited {
-	color:#007bc4;
-	text-decoration:none;
-	outline:none;
+    color:#007bc4;
+    text-decoration:none;
+    outline:none;
 }
 
 a:hover{
-	text-decoration:underline;
+    text-decoration:underline;
 }
 
 #rounded{
-	width:800px;
-	margin:20px auto;
-	text-align:left;
+    width:800px;
+    margin:20px auto;
+    text-align:left;
 }
 
 .container{
-	background-color:#FFFFFF;
-	padding:10px 20px 20px 20px;
+    background-color:#FFFFFF;
+    padding:10px 20px 20px 20px;
 }
 
 #navigation{
-margin:30px 0px;
+    margin:30px 0px;
 }
 #button_li{
-	list-style:none;
-	display:block;
-	float:left;
-	width:80px;
+    list-style:none;
+    display:block;
+    float:left;
+    width:80px;
 }
 
-li a,li a:visited{
-	padding:5px 10px;
-	text-align:center;
-	background-color:#000033;
-	color:white;
-	
-	
-	border-radius:5px;
-
-	display:block;
-	margin-right:10px;
+#button_li a,#button_li a:visited{
+    padding:5px 10px;
+    text-align:center;
+    background-color:#000033;
+    color:white;
+    border-radius:5px;
+    display:block;
+    margin-right:10px;
 }
 
 li a:hover{
-	background-color:#666666;
-	text-decoration:none;
+    background-color:#666666;
+    text-decoration:none;
 }
 
 #pageContent{
-	margin-top:20px;
+    margin-top:20px;
 
-	border:1px solid #123456;
-	padding:10px;
-	border-radius: 5px;
+    border:1px solid #123456;
+    padding:10px;
+    border-radius: 5px;
 }
 
 #loading{
-	visibility:hidden;
+    visibility:hidden;
 }
 
 .demo{
-	color:white;
+    color:white;
 }
 #button_li{
-	width:190px;
-	}
+    width:190px;
+}
 #title{
-	width:130px;
-	height:40px;
-	float:left;
+    width:130px;
+    height:40px;
+    float:left;
 }
 #account_head{
-	height:40px;
-	width:150px;
-	float:right;
-        font-size: 15px;
+    height:40px;
+    width:150px;
+    float:right;
+    font-size: 15px;
 }
 #title_bar{
-	width:750px;
-	height:42px;
+    width:750px;
+    height:42px;
 }
 .titleright_button{
     border-style: none;
@@ -105,14 +102,21 @@ li a:hover{
     background-color: white;
     float: right;
 }
-#upload{
-    height: 100px;
+#button_div{
+    height: 50px;
     width: 757px;
 }
-#upload_button{
-    height: 98px;
-    width: 752px;
+.main_button{
+    height: 50px;
+    width: 248px;
     background-color: white;
+    border-style: none;
+}
+.newmain_button{
+    height: 50px;
+    width: 248px;
+    color: white;
+    background-color: #000033;
     border-style: none;
 }
 #contentwith_link{
@@ -125,4 +129,22 @@ li a:hover{
     margin-bottom: 40px;
     height: 50px;
     width: 100px;
+}
+#account_div{
+    height: 70px;
+    width: 100px;
+    position: absolute;
+    top: 70px;
+    left: 870px;
+    border:1px solid #123456;
+    border-radius:10px;
+    background-color:white;
+}
+.account_a,.account_a:visited{
+    text-align: left;
+    font-size: 15px;
+    color: #123456;
+    float:left;
+    padding-top:10px;
+    padding-left:10px;
 }

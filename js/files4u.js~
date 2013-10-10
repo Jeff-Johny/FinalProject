@@ -77,15 +77,10 @@ $("#login_form").validate({
             
                 if ($('#login_form').valid()) {
                     e.preventDefault();
-	
 		 value=$("#login_form").serialize();
-                 console.log(value);
+                 alert(value);
                 $.post("login.php", value).done(function(data) {
-                    if(data){
-                        window.location.assign('demo.html');
-                         alert("hai");
-                    }
-                        
+                    alert(data);
                 });
                 }
  });

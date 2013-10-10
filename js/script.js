@@ -1,9 +1,22 @@
 var default_content = "";
 
 $(document).ready(function() {
-
+    $('.ad_div').cycle({
+         fx:    'zoom',
+         easing: 'easeOutBack', 
+         delay:  -4000 
+    });
+    
+    $("#account_div").hide();
+    $("#account_button").click(function() {
+        $("#account_div").show();
+    });
+    $("#account_div").mouseleave(function() {
+        $("#account_div").hide();
+    });
+    
     checkURL();
-    $('ul li a').click(function(e) {
+    $('ul li a').click(function() {
 
         checkURL(this.hash);
 
@@ -15,6 +28,27 @@ $(document).ready(function() {
 
     setInterval("checkURL()", 250);
 
+    $("#main_button1").mouseenter(function() {
+        document.getElementById("main_button1").className = "newmain_button";
+        $("#contentwith_link").load("page_5.html");
+    });
+    $("#main_button1").mouseleave(function() {
+        document.getElementById("main_button1").className = "main_button";
+    });
+    $("#main_button2").mouseenter(function() {
+        document.getElementById("main_button2").className = "newmain_button";
+        $("#contentwith_link").load("page_6.html")
+    });
+    $("#main_button2").mouseleave(function() {
+        document.getElementById("main_button2").className = "main_button";
+    });
+    $("#main_button3").mouseenter(function() {
+        document.getElementById("main_button3").className = "newmain_button";
+        $("#contentwith_link").load("page_7.html")
+    });
+    $("#main_button3").mouseleave(function() {
+        document.getElementById("main_button3").className = "main_button";
+    });
 });
 
 var lasturl = "";
@@ -61,5 +95,8 @@ function loadPage(url)
         }
 
     });
+
+
+
 
 }

@@ -1,7 +1,17 @@
  <?php
    $con = mysqli_connect("localhost","root","mundjeff","files4u");
-   $query = mysqli_query($con,"select * from tb_account where email = '".$_POST['email']."' and password = '".$_POST['password']."'");
-   $i= mysqli_affected_rows($query);
-	echo $i;
+
+
+$result = mysqli_query($con,"SELECT account_id FROM tb_account where email='".$_POST['email']."' and password='".$_POST['password']."'");
+	
+$row = mysqli_fetch_array($result);
+
+//echo $row;
+if( $row > '0')
+{
+echo '1';
+}
+
    mysqli_close($con);
+   
 ?>
