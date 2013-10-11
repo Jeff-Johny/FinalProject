@@ -1,4 +1,9 @@
-$(document).ready(function(){try{
+$(document).ready(function(){
+    $('.ad_div').cycle({
+        fx: 'scrollDown' 
+});
+    
+    try{
     $("#signup_form").validate({
     rules: {
     email: {
@@ -81,9 +86,11 @@ $("#login_form").validate({
 		 value=$("#login_form").serialize();
                  console.log(value);
                 $.post("login.php", value).done(function(data) {
-                    if(data){
+                    if(data===" Array"){
                         window.location.assign('demo.html');
-                         alert("hai");
+                    }
+                    else{
+                        document.getElementById("error").innerHTML='<a style="color:red;margin-left:20px">Incorrect user name or password</a>';
                     }
                         
                 });

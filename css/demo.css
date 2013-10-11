@@ -148,3 +148,10 @@ li a:hover{
     padding-top:10px;
     padding-left:10px;
 }
+#upload_div{
+    height:300px;
+    width: 760px;
+    border: 1px solid #123456;
+    border-radius: 10px;
+    margin-top: 50px;
+}

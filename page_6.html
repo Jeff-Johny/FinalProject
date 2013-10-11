@@ -1,38 +1,22 @@
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript">
-function savepic()
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://rawgithub.com/hayageek/jquery-upload-file/master/css/uploadfile.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://rawgithub.com/hayageek/jquery-upload-file/master/js/jquery.uploadfile.min.js"></script>
+</head>
+<body>
+<div id="upload_div">
+<div id="fileuploader">Upload</div>
+</div>
+<script>
+$(document).ready(function()
 {
-//can perform client side field required checking for "fileToUpload" field
-$.ajaxFileUpload
-(
-{
-url:'doajaxfileupload.php',
-secureuri:false,
-fileElementId:'fileToUpload',
-dataType: 'json',
-success: function (data, status)
-{
-if(typeof(data.error) != 'undefined')
-{
-if(data.error != '')
-{
-alert(data.error);
-}else
-{
-alert(msg); // returns location of uploaded file
-}
-}
-},
-error: function (data, status, e)
-{
-alert(e);
-}
-}
-)
-return false;
-}
+	$("#fileuploader").uploadFile({
+	url:"upload.php",
+	fileName:"myfile"
+	});
+});
 </script>
-
-<input type="file" name="fileToUpload" id="fileToUpload" />
-<input type="button" value="Save" onclick="savepic()" /> //you can also use event listeners instead of onclick here
-
+</body>
+</html>

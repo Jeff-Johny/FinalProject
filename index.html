@@ -9,6 +9,8 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
         <script src="js/jquery.cycle.all.js">
         </script>
+        <link href="https://rawgithub.com/hayageek/jquery-upload-file/master/css/uploadfile.css" rel="stylesheet">
+<script src="https://rawgithub.com/hayageek/jquery-upload-file/master/js/jquery.uploadfile.min.js"></script>
         <script src="js/files4u.js">
         </script>
         <link rel="stylesheet" type="text/css" href="css/files4u.css">
@@ -55,6 +57,7 @@
                     <button id="download">
                         Download
                     </button>
+                    <div id="fileuploader">Upload</div>
                 </div>
                 <div class="bodyright">
                     <br>
@@ -69,10 +72,18 @@
                         <img id="buttonimage2" src="images/fb.png" alt="fb" width="15" height="15">
                         facebook
                     </button>
-                    <button id="socialsite">
+                    <button id="socialsite" class="g-signin" data-clientid="568189150813.apps.googleusercontent.com" data-cookiepolicy="single_host_origin">
                         <img id="buttonimage2" src="images/google.png" alt="google" width="15" height="15">
                         google
                     </button>
+                         <span
+                    class="g-signin"
+                    data-callback="signinCallback"
+                    data-clientid="568189150813.apps.googleusercontent.com"
+                    data-cookiepolicy="single_host_origin"
+                    data-requestvisibleactions="http://schemas.google.com/AddActivity"
+                    data-scope="https://www.googleapis.com/auth/plus.login">
+                  </span>
                     <br>
                     <br>
                     <form id="signup_form">
@@ -93,14 +104,21 @@
             </div>
             <div class="bottom">
                 <div id="bottom_in">
+                    <h3 id="most_searched">Most searched...</h3>
                     <div class="ad_div">
-                        <img src="images/twitter.png" alt="1" width="150" height="150"/>
-                        <img src="images/photos.png" alt="2" width="150" height="150"/>
-                        <img src="images/yt.jpeg" alt="3" width="150" height="150"/>
+                        <img src="images/twitter.png" alt="1" width="250" height="170"/>
+                        <img src="images/photos.png" alt="2" width="250" height="170"/>
+                        <img src="images/yt.jpeg" alt="3" width="250" height="170"/>
                     </div>
                      <div class="ad_div">
+                         <img src="images/twitter.png" alt="1" width="250" height="170"/>
+                        <img src="images/photos.png" alt="2" width="250" height="170"/>
+                        <img src="images/yt.jpeg" alt="3" width="250" height="170"/>
                     </div>
                      <div class="ad_div">
+                         <img src="images/twitter.png" alt="1" width="250" height="170"/>
+                        <img src="images/photos.png" alt="2" width="250" height="170"/>
+                        <img src="images/yt.jpeg" alt="3" width="250" height="170"/>
                     </div>
                 </div>
             </div>
@@ -114,6 +132,8 @@
 
                 <div class="inside_login">
                     <br>
+                    <label id="error"></label>
+                    <br>
                     <span id="remember_me">
                         <input type="checkbox" checked="check" value="Rememberme"/>
                         Remember me
@@ -122,8 +142,62 @@
                 </div>
                 <img id="socialimage" src="images/twitter.png" alt="twitter" width="23" height="25">
                 <img id="socialimage" src="images/fb.png" alt="fb" width="25" height="25">
-                <img id="socialimage" src="images/google.png" alt="google" width="25" height="25">
+                <button >
+                    <img id="socialimage" src="images/google.png" alt="google" width="25" height="25"/>
+                </button>
+                <span id="signinButton">
+               
+</span>
+
             </form>
         </div>
+        <script type="text/javascript">
+      (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/client:plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+     function signinCallback(authResult) {
+  if (authResult['access_token']) {
+    // Update the app to reflect a signed in user
+    // Hide the sign-in button now that the user is authorized, for example:
+    document.getElementById('signinButton').setAttribute('style', 'display: none');
+  } else if (authResult['error']) {
+    // Update the app to reflect a signed out user
+    // Possible error values:
+    //   "user_signed_out" - User is signed-out
+    //   "access_denied" - User denied access to your app
+    //   "immediate_failed" - Could not automatically log in the user
+    console.log('Sign-in state: ' + authResult['error']);
+  }
+}
+function disconnectUser(access_token) {
+  var revokeUrl = 'https://accounts.google.com/o/oauth2/revoke?token=' +
+      access_token;
+
+  // Perform an asynchronous GET request.
+  $.ajax({
+    type: 'GET',
+    url: revokeUrl,
+    async: false,
+    contentType: "application/json",
+    dataType: 'jsonp',
+    success: function(nullResponse) {
+      // Do something now that user is disconnected
+      // The response is always undefined.
+    },
+    error: function(e) {
+      // Handle the error
+      // console.log(e);
+      // You could point users to manually disconnect if unsuccessful
+      // https://plus.google.com/apps
+    }
+  });
+}
+// Could trigger the disconnect on a button click
+$('#revokeButton').click(disconnectUser);
+
+    </script>
+
     </body>
 </html>    

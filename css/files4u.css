@@ -232,8 +232,26 @@ body{
     text-align:center;
 }
 .ad_div{
-    height: 170px;
+    height: 160px;
     width: 250px;
     margin-left: 20px;
     float: left;
+}
+
+#most_searched{
+    text-align: left;
+    margin-left:20px;
+}
+#content_page_ui_in{
+    padding-left:10px;
+    list-style:none;
+    height:80px;
+    border:1px dashed #cccccc;
+    width:720px;
+    margin-bottom:10px;
+}
+#centent_page_ui_in_left{
+    height: 30px;
+    width: 50px;
+    background-color: yellow;
 }
