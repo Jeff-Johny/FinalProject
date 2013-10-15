@@ -118,7 +118,7 @@
     color: white;
 }
 
-#sign{
+#sign,#sign_name{
     margin-left: 10px;
     margin-top: 10px;
     width: 345px;
@@ -126,7 +126,6 @@
     margin-bottom:2px;
     border-radius:5px;
 }
-
 #fillfield{
     margin-left: 10px;
 }
@@ -241,17 +240,4 @@ body{
 #most_searched{
     text-align: left;
     margin-left:20px;
-}
-#content_page_ui_in{
-    padding-left:10px;
-    list-style:none;
-    height:80px;
-    border:1px dashed #cccccc;
-    width:720px;
-    margin-bottom:10px;
-}
-#centent_page_ui_in_left{
-    height: 30px;
-    width: 50px;
-    background-color: yellow;
 }

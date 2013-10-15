@@ -41,14 +41,14 @@ a:hover{
 #navigation{
     margin:30px 0px;
 }
-#button_li{
+.button_li{
     list-style:none;
     display:block;
     float:left;
-    width:80px;
+    width:190px;
 }
 
-#button_li a,#button_li a:visited{
+.button_li a,.button_li a:visited{
     padding:5px 10px;
     text-align:center;
     background-color:#000033;
@@ -65,7 +65,8 @@ li a:hover{
 
 #pageContent{
     margin-top:20px;
-
+    height: auto;
+    width: 730px;
     border:1px solid #123456;
     padding:10px;
     border-radius: 5px;
@@ -78,9 +79,6 @@ li a:hover{
 .demo{
     color:white;
 }
-#button_li{
-    width:190px;
-}
 #title{
     width:130px;
     height:40px;
@@ -88,7 +86,7 @@ li a:hover{
 }
 #account_head{
     height:40px;
-    width:150px;
+    width:220px;
     float:right;
     font-size: 15px;
 }
@@ -96,9 +94,15 @@ li a:hover{
     width:750px;
     height:42px;
 }
-.titleright_button{
+#titleright_button_settings{
     border-style: none;
-    width: 60px;
+    width: 50px;
+    background-color: white;
+    float: right;
+}
+#titleright_button{
+    border-style: none;
+    width: 170px;
     background-color: white;
     float: right;
 }
@@ -149,9 +153,29 @@ li a:hover{
     padding-left:10px;
 }
 #upload_div{
-    height:300px;
-    width: 760px;
-    border: 1px solid #123456;
-    border-radius: 10px;
-    margin-top: 50px;
+    height:100px;
+    width: 730px;
+    margin-top: 20px;
+}
+#content_page_ul_in_left{
+    width: 350px;
+    height: 100px;
+    float: left;
+}
+#content_page_ul_in_right{
+    width: 380px;
+    height: 100px;
+    float: left;
+}
+#content_page_ul_in{
+    width: 740px;
+    height: 100px;
+    margin-top:0px;
+}
+#content_page_ul{
+    list-style: none;
+}
+#account_setting_div{
+    width:500px;
+    height: 400px;
 }

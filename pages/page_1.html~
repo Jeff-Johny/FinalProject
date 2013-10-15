@@ -1,14 +1,34 @@
+<div>
+    <ul id="content_page_ul">
+        <li>
+            <div id="content_page_ul_in">
 
-<ul id="content_page_ul">
-<div style="padding-left:10px;list-style:none;height:80px;border:1px dashed #cccccc;width:720px;margin-bottom:10px">
-<br>
-<br>
-<li><span>file1</span>
-<span><button id="download_button">Download</button></span>
-</li>
+                <div id="content_page_ul_in_left">
+                    <br>
+                    <br>
+                    <input type="radio" value="radio_1" name="download_type">
+                    file1
+                </div>
+                <div id="content_page_ul_in_right">
+                    <br>
+                    <button id="download_button">Download</button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <!--div id="content_page_ul_in">
+                <div id="content_page_ul_in_left">
+                    <br>
+                    <br>
+                    <input type="radio" value="radio_1" name="download_type">
+                    file2
+                </div>
+                <div id="content_page_ul_in_right">
+                    <br>
+                    <button id="download_button">Download</button>
+                </div>
+
+            </div-->
+        </li>
+    </ul>
 </div>
-<div style="padding-left:10px;list-style:none;height:80px;
-width:720px;border:1px dashed #cccccc">
-<li>file2</li>
-</div>
-<ul>
