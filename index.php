@@ -40,8 +40,13 @@ session_start();
                     <br>
                     <span id="searchtext">Search here for your file...</span>
                     <input id="search" type="text" placeholder="Search">
+			
                     <img id="searchimage" src="images/search.png" alt="search" width="40" height="40"/>
-                    <br>
+	                    
+			<br>
+			<div>
+			<label id="search_result"></label>
+			</div>
                     <button id="subbutton1">
                         <img id="buttonimage1" src="images/files.png" alt="file" width="15" height="15"/>
                         Files
@@ -101,20 +106,20 @@ session_start();
             <div class="bottom">
                 <div id="bottom_in">
                     <h3 id="most_searched">Most searched...</h3>
-                    <div class="ad_div">
-                        <img src="images/twitter.png" alt="1" width="250" height="170"/>
-                        <img src="images/photos.png" alt="2" width="250" height="170"/>
-                        <img src="images/yt.jpeg" alt="3" width="250" height="170"/>
+                    <div class="ad_div" id="ad_div1">
+                        <img src="images/ak.jpg" alt="1" width="250" height="170"/>
+                        <img src="images/mj.jpg" alt="2" width="250" height="170"/>
+                        <img src="images/jb.jpg" alt="3" width="250" height="170"/>
                     </div>
-                     <div class="ad_div">
-                         <img src="images/twitter.png" alt="1" width="250" height="170"/>
-                        <img src="images/photos.png" alt="2" width="250" height="170"/>
-                        <img src="images/yt.jpeg" alt="3" width="250" height="170"/>
+                     <div class="ad_div" id="ad_div2">
+                         <img src="images/tt.jpg" alt="1" width="250" height="170"/>
+                        <img src="images/gd.jpg" alt="2" width="250" height="170"/>
+                        <img src="images/kk.jpg" alt="3" width="250" height="170"/>
                     </div>
-                     <div class="ad_div">
-                         <img src="images/twitter.png" alt="1" width="250" height="170"/>
-                        <img src="images/photos.png" alt="2" width="250" height="170"/>
-                        <img src="images/yt.jpeg" alt="3" width="250" height="170"/>
+                     <div class="ad_div" id="ad_div3">
+                         <img src="images/rooney.jpg" alt="1" width="250" height="170"/>
+                        <img src="images/mu.jpg" alt="2" width="250" height="170"/>
+                        <img src="images/gerr.jpg" alt="3" width="250" height="170"/>
                     </div>
                 </div>
             </div>

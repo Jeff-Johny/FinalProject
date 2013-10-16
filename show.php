@@ -1,10 +1,11 @@
 <?php
+session_start();
 $con = mysqli_connect("localhost","root","mundjeff","files4u");
 if(mysqli_connect_errno($con)>0)
 echo "connection error";
 
-$rowSQL = mysqli_query($con,"SELECT * FROM tb_collections");
-
+$rowSQL = mysqli_query($con,"SELECT * FROM tb_collections WHERE email='".$_SESSION['currentUser']."'");
+//print_r($_SESSION['currentUser']);
 
 $div_array = array();
 
@@ -14,12 +15,11 @@ while($row = mysqli_fetch_array($rowSQL)){
 		'<div id="content_page_ul_in_left">'.
                     '<br>'.
                     '<br>'.
-                    '<input type="radio" value="'.$row['collection_id'].'" name="download_type">'.
                  $row['filename'].'
                 </div>'.
                 '<div id="content_page_ul_in_right">'.
                     '<br>'.
-                    '<button id="download_button" >Download</button>'.
+                    '<button id="'.$row['collection_id'].'" class="download_button" onclick="download_item(this.id)">Download</button>'.
                 '</div>'.
 	'</div>'.
 '</li>';
@@ -28,26 +28,6 @@ while($row = mysqli_fetch_array($rowSQL)){
 }
 
 
-/*for($i=0;$i<sizeof($filenames);$i++){
-$div = '<div id="content_page_ul_in_left">
-                    <br>'.
-                    '<br>'.
-                    '<input type="radio" value="radio_1" name="download_type">'.
-                 $filenames[$i].'
-                </div>'.
-                '<div id="content_page_ul_in_right">'.
-                    '<br>'.
-                    '<button id="download_button">Download</button>'.
-                '</div>';
-
-array_push($div_array, $div);
-}*/
-
 echo json_encode($div_array);
-
-
-
-
-
 
 ?>

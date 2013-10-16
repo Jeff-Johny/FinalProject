@@ -1,14 +1,47 @@
 var lasturl = "";
 var data = "";
+var search_item = "";
+var flag = 0;
 $(document).ready(function() {
 
-    $("#account_settings").click(function(){
-       
-      $("#contentwith_link").load("account_settings.php");
+
+
+    $("#account_settings").click(function() {
+        $("#contentwith_link").load("account_settings.php");
+
     });
 
-    $('.ad_div').cycle({
+    $("#download").click(function() {
+        window.open("uploads/" + document.getElementById('search_result').innerHTML);
+    });
+
+    $("#searchimage").click(function() {
+        search_item = document.getElementById("search").value;
+        $.ajax({
+            type: 'POST',
+            url: 'search.php',
+            data: {'filename': search_item},
+            success: function(data) {
+                document.getElementById('search_result').innerHTML = data;
+            }
+        });
+    });
+    $("#account_settings").click(function() {
+
+        $("#contentwith_link").load("account_settings.php");
+    });
+
+    $('#ad_div1').cycle({
         fx: 'scrollDown'
+    });
+    $('#ad_div2').cycle({
+        fx: 'turnDown',
+        delay: -4000
+    });
+    $('#ad_div3').cycle({
+        fx: 'curtainX',
+        sync: false,
+        delay: -2000
     });
 
     try {
@@ -54,9 +87,8 @@ $(document).ready(function() {
                 value = $(this).serialize();
 
                 $.post("register.php", value).done(function() {
-                    window.location.assign("demo.php");
+                    loadPopupBox();
                 });
-                alert(currentName);
 
             }
         });
@@ -64,6 +96,61 @@ $(document).ready(function() {
     catch (e) {
         alert(e);
     }
+
+
+
+    $("#form_change_password").validate({
+        rules: {
+            current_pass: {
+                required: true,
+                minlength: 5
+            },
+            new_pass: {
+                required: true,
+                minlength: 5
+            },
+            confirm_new_pass: {
+                required: true,
+                minlength: 5,
+                equalTo: "#new_password"
+            }
+        },
+        messages: {
+            current_pass: {
+                required: "We need your email address to contact you",
+                minlength: "Your password must be at least 5 characters long"
+            },
+            password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long"
+            },
+            password_confirm: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long",
+                equalTo: "incorrect password"
+            }
+        }
+
+
+    });
+
+    $("#form_change_password").submit(function(e) {alert("hai");
+        if ($('#form_change_password').valid()) {
+            $.ajax({
+                type: 'POST',
+                url: 'change.php',
+                data: {'name': document.getElementById("change_name").value,
+                    'password': document.getElementById("new_password").value
+                },
+                success: function(data) {
+                    alert(data);
+                }
+            });
+        }
+    });
+
+
+
 
 
     try {
@@ -169,7 +256,7 @@ $(document).ready(function() {
     $('ul li a').click(function() {
 
         checkURL(this.hash);
-        
+
     });
 
     //filling in the default content
@@ -182,7 +269,7 @@ $(document).ready(function() {
         document.getElementById("main_button1").className = "newmain_button";
     });
     $("#main_button1").click(function() {
-        $("#contentwith_link").load("searching_page.html");
+        $("#contentwith_link").load("searching_page.php");
     })
     $("#main_button1").mouseleave(function() {
         document.getElementById("main_button1").className = "main_button";
@@ -223,13 +310,13 @@ $(document).ready(function() {
         });
 
     });
-   
+
     $("#main_button3").mouseleave(function() {
         document.getElementById("main_button3").className = "main_button";
     });
 
 
-  
+
 
 });
 
@@ -280,3 +367,50 @@ function loadPage(url)
 
 }
 
+function download_item(clicked_id) {
+    $.ajax({
+        type: 'POST',
+        url: 'search_id.php',
+        data: {'search_id': clicked_id},
+        success: function(data) {
+            window.open("uploads/" + data);
+        }
+    });
+}
+function change() {
+    $("#contentwith_link").load("collection_page.html", function() {
+        $.ajax({
+            type: "POST",
+            url: "show.php",
+            success: function(data) {
+                var div_text = JSON.parse(data);
+                $("#pageContent").append('<div>' +
+                        '<ul id="content_page_ul">' +
+                        '</ul>' +
+                        '</div>');
+                for (var i = 0; i < div_text.length; i++) {
+                    console.log('inside');
+                    $("#content_page_ul").append(div_text[i]);
+                    console.log(div_text);
+                }
+            }
+        });
+
+
+
+    });
+}
+function search() {
+    search_item = document.getElementById("search").value;
+    $.ajax({
+        type: 'POST',
+        url: 'search.php',
+        data: {'filename': search_item},
+        success: function(data) {
+            document.getElementById('search_result').innerHTML = data;
+        }
+    });
+}
+function download_item() {
+    window.open("uploads/" + document.getElementById('search_result').innerHTML);
+}

@@ -9,6 +9,7 @@ $count = mysqli_affected_rows($con);
  $row = mysqli_fetch_array($query);
 if($count){
      $_SESSION['currentUser'] = $row['email'];
+	$_SESSION['currentPic'] = $row['prof_pic'];
      echo $row;
  }
  else
