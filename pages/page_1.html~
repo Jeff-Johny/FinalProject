@@ -3,7 +3,7 @@
         <li>
             <div id="content_page_ul_in">
 
-                <div id="content_page_ul_in_left">
+              <!--  <div id="content_page_ul_in_left">
                     <br>
                     <br>
                     <input type="radio" value="radio_1" name="download_type">
@@ -12,7 +12,7 @@
                 <div id="content_page_ul_in_right">
                     <br>
                     <button id="download_button">Download</button>
-                </div>
+                </div>  --->
             </div>
         </li>
         <li>

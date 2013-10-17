@@ -153,9 +153,9 @@ li a:hover{
     padding-left:10px;
 }
 #account_settings{
-    width: 100px;
+   
     background-color: white; 
-    height: 35px;
+    
     border-radius: 10px;
     border-style: none;
     text-align: left;
@@ -165,7 +165,7 @@ li a:hover{
     padding-left:10px;
 }
 #upload_div{
-    height:100px;
+    height:auto;
     width: 730px;
     margin-top: 20px;
 }
@@ -259,7 +259,7 @@ li a:hover{
 }
 #change_password_div{
     width:400px;
-    height: 200px;
+    height: 280px;
     background-color: #808080;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -290,4 +290,19 @@ li a:hover{
     border-style: none;
     color: white;
     background-color: #123456;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+#change_name{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+#name_done{
+    width:100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #123456;
+    color:white;
 }

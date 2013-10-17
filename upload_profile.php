@@ -28,6 +28,7 @@ if(isset($_FILES["myfile"]))
 	  }
 	$i=mysqli_query($con,"update tb_account set prof_pic='$fileName' where email='".$_SESSION['currentUser']."'");
 		echo $i;
+		$_SESSION['currentPic'] = $fileName;
 	
 	}
     echo json_encode($ret);

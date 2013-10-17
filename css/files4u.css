@@ -111,7 +111,7 @@
     color: white;
     text-shadow: 2px 2px 2px #FFEFD5;
 }
-#socialsite{
+.socialsite{
     margin-left: 10px;
     background-color:#123456;
     border-radius: 5px;
@@ -189,7 +189,7 @@
     color: white;
     border-radius: 10px;
 }
-#socialimage{
+.socialimage{
     float:right;
     margin-right: 20px;
 }

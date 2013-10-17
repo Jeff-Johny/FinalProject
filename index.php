@@ -8,15 +8,8 @@ session_start();
         <title>
             Files4U
         </title>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-        <script src="js/jquery.cycle.all.js">
-        </script>
-        <link href="https://rawgithub.com/hayageek/jquery-upload-file/master/css/uploadfile.css" rel="stylesheet">
-<script src="js/jquery.uploadfile.min.js"></script>
-        <script src="js/files4u.js">
-        </script>
+       
+        <link href="css/uploadfile.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/files4u.css">
     </head>
     <body>
@@ -63,7 +56,7 @@ session_start();
                         <img id="buttonimage2" src="images/photos.png" alt="photo" width="15" height="15">
                         Photos
                     </button>
-                    <button id="download">
+                    <button id="download" onclick="download_item()">
                         Download
                     </button>
                 </div>
@@ -72,15 +65,15 @@ session_start();
                     <span id="join">Join now!</span>
                     <br>
                     <br>
-                    <button id="socialsite">
+                    <button class="socialsite" id="socialsite1">
                         <img id="buttonimage2" src="images/twitter.png" alt="twitter" width="15" height="15">
                         twitter
                     </button>
-                    <button id="socialsite">
+                    <button class="socialsite" id="socialsite2">
                         <img id="buttonimage2" src="images/fb.png" alt="fb" width="15" height="15">
                         facebook
                     </button>
-                    <button id="socialsite" >
+                    <button class="socialsite" id="socialsite3">
                         <img id="buttonimage2" src="images/google.png" alt="google" width="15" height="15">
                         google
                     </button>
@@ -141,17 +134,22 @@ session_start();
                     </span>
                     <input type="submit" id="log-in_button" value="Log In"/>
                 </div>
-                <img id="socialimage" src="images/twitter.png" alt="twitter" width="23" height="25">
-                <img id="socialimage" src="images/fb.png" alt="fb" width="25" height="25">
-                <button >
-                    <img id="socialimage" src="images/google.png" alt="google" width="25" height="25"/>
-                </button>
+                <img class="socialimage" id="socialimage1" src="images/twitter.png" alt="twitter" width="23" height="25">
+                <img class="socialimage" id="socialimage2" src="images/fb.png" alt="fb" width="25" height="25">
+                
+                    <img class="socialimage" id="socialimage3" src="images/google.png" alt="google" width="25" height="25"/>
+                
                 <span id="signinButton">
                
 </span>
 
             </form>
         </div>
-   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.cycle.all.js"></script>
+	<script src="js/jquery.uploadfile.min.js"></script>
+	<script src="js/files4u.js"></script>
     </body>
 </html>    
