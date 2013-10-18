@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link href="css/uploadfile.css" rel="stylesheet">
-
-</head>
-<body>
-<div id="upload_div">
-
-<h2>Uplaod your files...</h2><div id="fileuploader_1">Upload</div>
-</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/jquery.uploadfile.min.js"></script>
-<script>
-$("#fileuploader_1").uploadFile({
-	url:"upload_file.php",
-	allowedTypes:"txt,pdf,doc,zip",	
-	fileName:"myfile"
-	});
-</script>
-</body>
+    <head>
+        <link href="css/uploadfile.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="uploadDiv">
+            <h2>Uplaod your files...</h2>
+            <div id="fileUploader1">Upload
+            </div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/jquery.uploadfile.min.js"></script>
+        <script>
+            $("#fileUploader1").uploadFile({
+                url: "uploadFile.php",
+                allowedTypes: "txt,pdf,doc,zip",
+                fileName: "myfile"
+            });
+        </script>
+    </body>
 </html>

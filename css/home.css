@@ -1,0 +1,306 @@
+
+body,h1,h3,p,td,quote,small,form,input,ul,li,ol,label{
+    margin:0px;
+    padding:0px;
+    font-family:Arial;
+}
+
+body{
+    margin-top:20px;
+    color:#51555C;
+    font-size:13px;
+    background-color:#123456;
+    text-align:center;
+}
+
+.clear{
+    clear:both;
+}
+
+a, a:visited {
+    color:#007bc4;
+    text-decoration:none;
+    outline:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+#rounded{
+    width:800px;
+    margin:20px auto;
+    text-align:left;
+}
+
+.container{
+    background-color:#FFFFFF;
+    padding:10px 20px 20px 20px;
+}
+
+#navigation{
+    margin:30px 0px;
+}
+.buttonLi{
+    list-style:none;
+    display:block;
+    float:left;
+    width:190px;
+}
+
+.buttonLi a,.buttonLi a:visited{
+    padding:5px 10px;
+    text-align:center;
+    background-color:#000033;
+    color:white;
+    border-radius:5px;
+    display:block;
+    margin-right:10px;
+}
+
+li a:hover{
+    background-color:#666666;
+    text-decoration:none;
+}
+
+#pageContent{
+    margin-top:20px;
+    height: auto;
+    width: 730px;
+    border:1px solid #123456;
+    padding:10px;
+    border-radius: 5px;
+}
+
+#loading{
+    visibility:hidden;
+}
+
+.demo{
+    color:white;
+}
+#title{
+    width:130px;
+    height:40px;
+    float:left;
+}
+#accountHead{
+    height:40px;
+    width:220px;
+    float:right;
+    font-size: 15px;
+}
+#titleBar{
+    width:750px;
+    height:42px;
+}
+#titlerightButtonSettings{
+    border-style: none;
+    width: 50px;
+    background-color: white;
+    float: right;
+}
+#titleRightButton{
+    border-style: none;
+    width: 170px;
+    background-color: white;
+    float: right;
+}
+#buttonDiv{
+    height: 50px;
+    width: 757px;
+}
+.mainButton{
+    height: 50px;
+    width: 248px;
+    background-color: white;
+    border-style: none;
+}
+.newMainButton{
+    height: 50px;
+    width: 248px;
+    color: white;
+    background-color: #000033;
+    border-style: none;
+}
+#contentWithLink{
+    width : 760px;
+    height: auto;
+}
+.downloadButton{
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    height: 50px;
+    width: 100px;
+}
+#accountDiv{
+    height: 70px;
+    width: 100px;
+    position: absolute;
+    top: 70px;
+    left: 870px;
+    border:1px solid #123456;
+    border-radius:10px;
+    background-color:white;
+}
+.accountA,.accountA:visited{
+    text-align: left;
+    font-size: 15px;
+    color: #123456;
+    float:left;
+    padding-top:10px;
+    padding-left:10px;
+}
+#accountSettings{
+    background-color: white; 
+    border-radius: 10px;
+    border-style: none;
+    text-align: left;
+    font-size: 15px;
+    color: #123456;
+    padding-top:10px;
+    padding-left:10px;
+}
+#uploadDiv{
+    height:auto;
+    width: 730px;
+    margin-top: 20px;
+}
+#contentPageUlInLeft{
+    width: 350px;
+    height: 100px;
+    float: left;
+}
+#contentPageUlInRight{
+    width: 380px;
+    height: 100px;
+    float: left;
+}
+#contentPageUlIn{
+    width: 740px;
+    height: 100px;
+    margin-top:0px;
+}
+#contentPageUl{
+    list-style: none;
+}
+#accountSettingDiv{
+    width:500px;
+    height: 400px;
+}
+.bodyLeft{
+    height: 300px;
+    width: 400px;
+    margin-left: 150px;
+    margin-top: 40px;
+    float :left;
+    border-radius: 10px;
+}
+#search{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 300px;
+    height:25px;
+    float: left;
+}
+#searchText{
+    margin-left: 30px;
+}
+#searchImage{
+    width: 40px;
+    height: 40px;
+    margin-top: 17px;
+    float: left;
+}
+#subButton1{
+    background-color:  white;
+    border-style: none;
+    margin-left: 30px;
+    color: #123456;
+}
+#subButton{
+    background-color:  	white;
+    border-style: none;
+    color: #123456;
+}
+#download{
+    height: 100px;
+    width: 350px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left:25px;
+    font-size: 40px;
+    background-color:#123456;
+    color: white;
+    text-shadow: 2px 2px 2px #FFEFD5;
+}
+#accountSettingsDiv{
+    height: auto;
+    width: 725px;
+    margin-top:30px;
+    border: 1px solid #123456;
+    padding-left:30px;
+    border-radius: 15px;
+    padding-bottom: 20px;
+}
+#accountSettingsHead{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+#changePasswordButton{
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #666666;
+    color: white;
+}
+#changePasswordDiv{
+    width:400px;
+    height: 280px;
+    background-color: #808080;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.changePass{
+    width: 300px;
+    margin-left: 50px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 17px;
+}
+#searchDiv{
+    height: 350px;
+    width: 750px;
+    margin-top:30px;
+    border-radius: 10px;
+    border: 1px solid #123456;
+}
+#searchResult{
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#submitChange{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+    background-color: #123456;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+#changeName{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+#nameDone{
+    width:100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #123456;
+    color:white;
+}

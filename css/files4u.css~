@@ -14,14 +14,14 @@
     width : 900px;
     border-radius: 10px;
 }
-.headIn{
+.head_in{
     height: 90px;
     width: 840px;
     border-radius: 10px;
     border: 1px solid #123456;
     margin-left:30px;
 }
-#headLeft{
+#head_left{
     float:left;
     width:150px;
     height: 40px;
@@ -37,6 +37,8 @@
     margin-top: 40px;
     float: left;
 }
+
+
 .login{
     height: 50px;
     width: 250px;
@@ -45,7 +47,7 @@
     left:-20px;
     float: right;
 }
-.bodyLeft{
+.bodyleft{
     height: 300px;
     width: 400px;
     margin-left: 30px;
@@ -54,7 +56,7 @@
     border: 1px solid #123456;
     border-radius: 10px;
 }
-.bodyRight{
+.bodyright{
     height: 300px;
     width: 390px;
     float: left;
@@ -75,26 +77,26 @@
     height:25px;
     float: left;
 }
-#searchText{
+#searchtext{
     margin-left: 30px;
 }
-#searchImage{
+#searchimage{
     width: 40px;
     height: 40px;
     margin-top: 17px;
     float: left;
 }
-#searchButton{
+#searchbutton{
     height: 30px;
     width:30px;  
 }
-#subButton1{
+#subbutton1{
     background-color:  white;
     border-style: none;
     margin-left: 30px;
     color: #123456;
 }
-#subButton{
+#subbutton{
     background-color:  	white;
     border-style: none;
     color: #123456;
@@ -115,7 +117,8 @@
     border-radius: 5px;
     color: white;
 }
-#sign,#signName{
+
+#sign,#sign_name{
     margin-left: 10px;
     margin-top: 10px;
     width: 345px;
@@ -123,7 +126,7 @@
     margin-bottom:2px;
     border-radius:5px;
 }
-#fillField{
+#fillfield{
     margin-left: 10px;
 }
 #middle{
@@ -147,7 +150,7 @@
     background-color: white;
     border-radius: 15px;
 }
-#bottomIn{
+#bottom_in{
     height:190px;
     width: 840px;
     margin-left: 30px;
@@ -159,7 +162,7 @@
 #join{
     margin-left: 10px;
 }
-#popupBox{
+#popup_box{
     position:fixed;
     top: 200px;
     left: 500px;
@@ -176,7 +179,7 @@
     margin-top: 10px;
     width: 250px;
 }
-#log-inButton{
+#log-in_button{
     font-size: 25px;
     width: 130px;
     height: 50px;
@@ -186,18 +189,18 @@
     color: white;
     border-radius: 10px;
 }
-.socialImage{
+.socialimage{
     float:right;
     margin-right: 20px;
 }
-#rememberMe{
+#remember_me{
     padding-left: 40px;
 }
-.insideLogin{
+.inside_login{
     width:300px;
     height: 80px;
 }
-#signPass{
+#sign_pass{
     margin-left: 10px;
     margin-top: 10px;
     width: 345px;
@@ -227,13 +230,14 @@ body{
     background-color:#123456;
     text-align:center;
 }
-.adDiv{
+.ad_div{
     height: 160px;
     width: 250px;
     margin-left: 20px;
     float: left;
 }
-#mostSearched{
+
+#most_searched{
     text-align: left;
     margin-left:20px;
 }

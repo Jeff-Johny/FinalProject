@@ -1,6 +1,6 @@
 var lasturl = "";
 var data = "";
-var search_item = "";
+var searchItem = "";
 var flag = 0;
 $(document).ready(function() {
     //link for different socialsites for login
@@ -23,13 +23,13 @@ $(document).ready(function() {
         window.location.assign('http://gmail.com');
     });
     //disply user name on account settings for editing
-    $("#account_settings").click(function() {
-        $("#contentwith_link").load("account_settings.php", function() {
+    $("#accountSettings").click(function() {
+        $("#contentWithLink").load("accountSettings.php", function() {
             $.ajax({
                 type: 'POST',
-                url: 'find_name.php',
+                url: 'findName.php',
                 success: function(data) {
-                    document.getElementById('change_name').value = data;
+                    document.getElementById('changeName').value = data;
                 }
             });
         });
@@ -37,40 +37,39 @@ $(document).ready(function() {
     });
     //downloading on searching
     $("#download").click(function() {
-        window.location("uploads/" + document.getElementById('search_result').innerHTML);
+        window.location("uploads/" + document.getElementById('searchResult').innerHTML);
     });
     //searching
-    $("#searchimage").click(function() {
-        search_item = document.getElementById("search").value;
+    $("#searchImage").click(function() {
+        searchItem = document.getElementById("search").value;
         $.ajax({
             type: 'POST',
             url: 'search.php',
-            data: {'filename': search_item},
+            data: {'filename': searchItem},
             success: function(data) {
-                document.getElementById('search_result').innerHTML = data;
+                document.getElementById('searchResult').innerHTML = data;
             }
         });
     });
-    $("#account_settings").click(function() {
-
-        $("#contentwith_link").load("account_settings.php");
+    $("#accountSettings").click(function() {
+        $("#contentWithLink").load("accountSettings.php");
     });
     //giving slide show
-    $('#ad_div1').cycle({
+    $('#adDiv1').cycle({
         fx: 'scrollDown'
     });
-    $('#ad_div2').cycle({
+    $('#adDiv2').cycle({
         fx: 'turnDown',
         delay: -4000
     });
-    $('#ad_div3').cycle({
+    $('#adDiv3').cycle({
         fx: 'curtainX',
         sync: false,
         delay: -2000
     });
     //validating signup form
     try {
-        $("#signup_form").validate({
+        $("#signupForm").validate({
             rules: {
                 email: {
                     required: true,
@@ -83,7 +82,7 @@ $(document).ready(function() {
                 password_confirm: {
                     required: true,
                     minlength: 5,
-                    equalTo: "#sign_pass"
+                    equalTo: "#signPass"
                 }
             },
             messages: {
@@ -102,12 +101,11 @@ $(document).ready(function() {
                 }
             }
         });
-        $("#signup_form").submit(function(e) {
-            if ($('#signup_form').valid()) {
-                currentName = document.getElementById("sign_name").innerHTML;
+        $("#signupForm").submit(function(e) {
+            if ($('#signupForm').valid()) {
+                currentName = document.getElementById("signName").innerHTML;
                 e.preventDefault();
                 value = $(this).serialize();
-
                 $.post("register.php", value).done(function() {
                     loadPopupBox();
                 });
@@ -119,7 +117,7 @@ $(document).ready(function() {
     }
     //validating login form
     try {
-        $("#login_form").validate({
+        $("#loginForm").validate({
             rules: {
                 email: {
                     required: true,
@@ -141,10 +139,10 @@ $(document).ready(function() {
                 }
             }
         });
-        $("#login_form").submit(function(e) {
-            if ($('#login_form').valid()) {
+        $("#loginForm").submit(function(e) {
+            if ($('#loginForm').valid()) {
                 e.preventDefault();
-                value = $("#login_form").serialize();
+                value = $("#loginForm").serialize();
                 console.log(value);
                 $.post("login.php", value).done(function(data) {
                     if (data === "Array") {
@@ -161,7 +159,7 @@ $(document).ready(function() {
         alert(e);
     }
     //loading login form
-    $("#popup_box").hide();
+    $("#popupBox").hide();
     $(".login").click(function() {
         loadPopupBox();
     });
@@ -169,51 +167,51 @@ $(document).ready(function() {
         unloadPopupBox();
     });
     function unloadPopupBox() {	// TO Unload the Popupbox
-        $('#popup_box').fadeOut("slow");
+        $('#popupBox').fadeOut("slow");
         $(".main").css({// this is just for style		
             "opacity": "1"
         });
     }
     function loadPopupBox() {	// To Load the Popupbox
-        $('#popup_box').fadeIn("slow");
+        $('#popupBox').fadeIn("slow");
         $(".main").css({// this is just for style
             "opacity": ".3"
         });
     }
     //unsetting session variable
     $("#signout").click(function() {
-        $.post("unset_session.php");
+        $.post("unsetSession.php");
     });
     //loading account settings popup menu
-    $("#account_div").hide();
-    $("#titleright_button").click(function() {
-        $("#account_div").show();
+    $("#accountDiv").hide();
+    $("#titleRightButton").click(function() {
+        $("#accountDiv").show();
     });
-    $("#account_div").mouseleave(function() {
-        $("#account_div").hide();
+    $("#accountDiv").mouseleave(function() {
+        $("#accountDiv").hide();
     });
-    $("#main_button1").mouseenter(function() {
-        document.getElementById("main_button1").className = "newmain_button";
+    $("#mainButton1").mouseenter(function() {
+        document.getElementById("mainButton1").className = "newMainButton";
     });
-    $("#main_button1").click(function() {
-        $("#contentwith_link").load("searching_page.php");
+    $("#mainButton1").click(function() {
+        $("#contentWithLink").load("searchingPage.php");
     })
-    $("#main_button1").mouseleave(function() {
-        document.getElementById("main_button1").className = "main_button";
+    $("#mainButton1").mouseleave(function() {
+        document.getElementById("mainButton1").className = "mainButton";
     });
-    $("#main_button2").mouseenter(function() {
-        document.getElementById("main_button2").className = "newmain_button";
+    $("#mainButton2").mouseenter(function() {
+        document.getElementById("mainButton2").className = "newMainButton";
     });
 
-    $("#main_button2").mouseleave(function() {
-        document.getElementById("main_button2").className = "main_button";
+    $("#mainButton2").mouseleave(function() {
+        document.getElementById("mainButton2").className = "mainButton";
     });
-    $("#main_button3").mouseenter(function() {
-        document.getElementById("main_button3").className = "newmain_button";
+    $("#mainButton3").mouseenter(function() {
+        document.getElementById("mainButton3").className = "newMainButton";
     });
     //loading list of files
-    $("#main_button3").click(function() {
-        $("#contentwith_link").load("collection_page.html", function() {
+    $("#mainButton3").click(function() {
+        $("#contentWithLink").load("collectionPage.php", function() {
             $.ajax({
                 type: "POST",
                 data: {'type': '1'},
@@ -221,20 +219,20 @@ $(document).ready(function() {
                 success: function(data) {
                     var div_text = JSON.parse(data);
                     $("#pageContent").append('<div>' +
-                            '<ul id="content_page_ul">' +
+                            '<ul id="contentPageUl">' +
                             '</ul>' +
                             '</div>');
                     for (var i = 0; i < div_text.length; i++) {
                         console.log('inside');
-                        $("#content_page_ul").append(div_text[i]);
+                        $("#contentPageUl").append(div_text[i]);
                         console.log(div_text);
                     }
                 }
             });
         });
     });
-    $("#main_button3").mouseleave(function() {
-        document.getElementById("main_button3").className = "main_button";
+    $("#mainButton3").mouseleave(function() {
+        document.getElementById("mainButton3").className = "mainButton";
     });
 });
 function checkURL(hash){
@@ -256,7 +254,7 @@ function loadPage(url){
     $('#loading').css('visibility', 'visible');
     $.ajax({
         type: "POST",
-        url: "load_page.php",
+        url: "loadPage.php",
         data: 'page=' + url,
         dataType: "html",
         success: function(msg) {
@@ -268,69 +266,69 @@ function loadPage(url){
     });
 }
 //downloading items on the gallery
-function download_items(clicked_id) {
+function downloadItems(clickedId) {
     $.ajax({
         type: 'POST',
-        url: 'search_id.php',
-        data: {'search_id': clicked_id},
+        url: 'searchId.php',
+        data: {'searchId': clickedId},
         success: function(data) {
             window.open("uploads/" + data);
         }
     });
 }
 //show files with different category
-function show_with_type(type) {
-    $("#contentwith_link").load("collection_page.html", function() {
+function showWithType(type) {
+    $("#contentWithLink").load("collectionPage.php", function() {
         $.ajax({
             type: "POST",
             data: {'type': type},
             url: "show.php",
             success: function(data) {
-                var div_text = JSON.parse(data);
+                var divText = JSON.parse(data);
                 $("#pageContent").append('<div>' +
-                        '<ul id="content_page_ul">' +
+                        '<ul id="contentPageUl">' +
                         '</ul>' +
                         '</div>');
-                for (var i = 0; i < div_text.length; i++) {
-                    $("#content_page_ul").append(div_text[i]);
-                    console.log(div_text);
+                for (var i = 0; i < divText.length; i++) {
+                    $("#contentPageUl").append(divText[i]);
+                    console.log(divText);
                 }
             }
         });
     });
 }
 function search() {
-    search_item = document.getElementById("search").value;
+    searchItem = document.getElementById("search").value;
     $.ajax({
         type: 'POST',
         url: 'search.php',
-        data: {'filename': search_item},
+        data: {'fileName': search_item},
         success: function(data) {
-            document.getElementById('search_result').innerHTML = data;
+            document.getElementById('searchResult').innerHTML = data;
         }
     });
 }
 //download single file
-function download_item() {
-    window.open("uploads/" + document.getElementById('search_result').innerHTML);
+function downloadItem() {
+    window.open("uploads/" + document.getElementById('searchResult').innerHTML);
 }
 //loading different category for uploading file
-function upload_type_change() {
-    $("#contentwith_link").load("upload_page.html", function() {
+function uploadTypeChange() {
+    $("#contentWithLink").load("uploadPage.php", function() {
         checkURL();
-        $('ul li .upload_a').click(function() {
+        $('ul li .uploadA').click(function() {
             checkURL(this.hash);
         });
         //filling in the default content
-        default_content = $('#pageContent').html();
+        defaultContent = $('#pageContent').html();
         setInterval("checkURL()", 250);
     });
 }
-function name_change_done() {
+function nameChangeDone() {
     $.ajax({
         type: 'POST',
-        url: 'change_name.php',
-        data: {'name': document.getElementById("change_name").value
+        url: 'changeName.php',
+        data: {'name': document.getElementById("changeName").value
         },
         success: function() {
             alert("Name changed successfully!");

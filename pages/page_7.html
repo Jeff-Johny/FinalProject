@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link href="css/uploadfile.css" rel="stylesheet">
-
-</head>
-<body>
-<div id="upload_div">
-
-<h2>Uplaod your musics...</h2><div id="fileuploader_3">Upload</div>
-</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/jquery.uploadfile.min.js"></script>
-<script>
-$("#fileuploader_3").uploadFile({
-	url:"upload_music.php",
-	allowedTypes:"mp3,wma",	
-	fileName:"myfile"
-	});
-</script>
-</body>
+    <head>
+        <link href="css/uploadfile.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="uploadDiv">
+            <h2>Uplaod your musics...</h2>
+            <div id="fileUploader3">Upload
+            </div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/jquery.uploadfile.min.js"></script>
+        <script>
+            $("#fileUploader3").uploadFile({
+                url: "uploadMusic.php",
+                allowedTypes: "mp3,wma",
+                fileName: "myfile"
+            });
+        </script>
+    </body>
 </html>

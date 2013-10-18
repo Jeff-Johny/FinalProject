@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link href="css/uploadfile.css" rel="stylesheet">
-
-</head>
-<body>
-<div id="upload_div">
-<h2>Uplaod your videos...</h2>
-<div id="fileuploader_2">Upload</div>
-</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/jquery.uploadfile.min.js"></script>
-<script>
-$("#fileuploader_2").uploadFile({
-	url:"upload_video.php",
-	allowedTypes:"mp4,3gp,mgp",	
-	fileName:"myfile"
-	});
-</script>
-</body>
+    <head>
+        <link href="css/uploadfile.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="uploadDiv">
+            <h2>Uplaod your videos...</h2>
+            <div id="fileUploader2">Upload</div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/jquery.uploadfile.min.js"></script>
+        <script>
+            $("#fileUploader2").uploadFile({
+                url: "uploadVideo.php",
+                allowedTypes: "mp4,3gp,mgp",
+                fileName: "myfile"
+            });
+        </script>
+    </body>
 </html>
